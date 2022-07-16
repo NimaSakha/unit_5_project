@@ -1,16 +1,25 @@
-.grid {
+.gallery {
     margin: auto;
     margin-top: 20px;
     display: grid;
     place-items: center;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 1fr 300px 300px 300px;
+    grid-template-columns: 300px;
+    grid-template-rows: 1fr 187px 187px 187px 187px 187px 187px 187px 187px;
     gap: 50px;
     grid-template-areas:
-        "search search search search"
-        "img1 img2 img3 img4"
-        "img5 img6 img7 img8"
-        "img9 img10 img11 img12"
+        "search"
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
+        "img6"
+        "img7"
+        "img8"
+        "img9"
+        "img10"
+        "img11"
+        "img12"
     ;
 
 
@@ -35,8 +44,8 @@ img {
 input {
     padding: 10px;
     margin: auto;
-    width: 690px;
-    height: 30px;
+    width: 300px;
+    height: 45px;
     border: 2px solid lightgray;
     border-radius: 5px;
     grid-area: search;
@@ -88,4 +97,51 @@ input {
 
 .img12 {
     grid-area: img12;
+}
+
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-columns: 300px 300px 3;
+        grid-template-rows: 1fr 187px 187px 187px 187px 300px 300px;
+        grid-template-areas:
+            "search search "
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8"
+            "img9 img10"
+            "img11 img12"
+        ;
+    }
+}
+
+@media (min-width: 1050px) {
+    .gallery {
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 1fr 187px 187px 187px 187px;
+        grid-template-areas:
+            "search search search"
+            "img1 img2 img3"
+            "img4 img5 img6"
+            "img7 img8 img9"
+            "img10 img11 img12"
+        ;
+    }
+}
+
+@media (min-width: 1400px) {
+    .gallery {
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-rows: 1fr 187px 187px 187px;
+        grid-template-areas:
+            "search search search search"
+            "img1 img2 img3 img4"
+            "img5 img6 img7 img8"
+            "img9 img10 img11 img12"
+        ;
+    }
+
+    input {
+        width: 690px;
+    }
 }

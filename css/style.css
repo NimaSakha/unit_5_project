@@ -4,7 +4,7 @@
     display: grid;
     place-items: center;
     grid-template-columns: 300px;
-    grid-template-rows: 1fr 187px 187px 187px 187px 187px 187px 187px 187px;
+    grid-template-rows: 1fr repeat(8, 300px);
     gap: 50px;
     grid-template-areas:
         "search"
@@ -102,7 +102,7 @@ input {
 @media (min-width: 700px) {
     .gallery {
         grid-template-columns: 300px 300px;
-        grid-template-rows: 1fr 187px 187px 187px 187px 300px 300px;
+        grid-template-rows: 1fr repeat(6, 300px);
         grid-template-areas:
             "search search "
             "img1 img2"
